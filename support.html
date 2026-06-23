@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fawnly Support</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --background: #fffdf6;
+        --surface: #fffbf1;
+        --text: #1f2f27;
+        --muted: #65726b;
+        --accent: #274636;
+        --border: #e8dfce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+
+      main {
+        width: min(820px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 64px;
+      }
+
+      article {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: clamp(22px, 5vw, 42px);
+        box-shadow: 0 18px 48px rgba(31, 47, 39, 0.08);
+      }
+
+      a {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .back {
+        display: inline-block;
+        margin-bottom: 20px;
+        text-decoration: none;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 32px 0 8px;
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+
+      .placeholder {
+        color: var(--text);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="./index.html">Fawnly</a>
+      <article>
+        <h1>Fawnly Support</h1>
+
+        <p>Fawnly is a gentle, local-first walking companion for viewing steps, distance estimates, daily goals, and movement history.</p>
+
+        <p>For help, contact:</p>
+        <p class="placeholder"><a href="mailto:fawnlyapp@outlook.com">fawnlyapp@outlook.com</a></p>
+
+        <h2>Steps Are Not Updating</h2>
+        <p>Make sure motion or physical activity permission is enabled for Fawnly in your device settings. Step tracking also requires a real device with step sensor support. Simulators and emulators may show step tracking as unavailable.</p>
+        <p>If permission is denied, open your device settings and allow motion or physical activity access for Fawnly.</p>
+
+        <h2>Android Step Counting in v1</h2>
+        <p>On Android, Fawnly v1 counts live steps while the app is open. It does not use Android Health Connect yet, so it does not provide complete background step history in v1.</p>
+
+        <h2>Notification Permission</h2>
+        <p>Daily Summary notifications are optional. Fawnly asks for notification permission only when you turn Daily Summary on in settings.</p>
+        <p>If notifications are off, enable them in your device settings and then turn Daily Summary on again in Fawnly.</p>
+
+        <h2>Changing Units</h2>
+        <p>You can change distance units in the app settings. Fawnly supports kilometers and miles.</p>
+
+        <h2>Changing Your Daily Goal</h2>
+        <p>You can turn Daily Goal on or off and adjust the goal amount in settings. The goal is step-based.</p>
+
+        <h2>Clearing or Resetting Data</h2>
+        <p>Fawnly v1 stores activity history and settings locally on your device. To remove stored app data, delete Fawnly from your device or clear the app's stored data through your device settings where supported.</p>
+
+        <h2>Estimates</h2>
+        <p>Distance and calorie values are estimates. They are not medical advice and should not be used for diagnosis, treatment, or medical decision-making.</p>
+      </article>
+    </main>
+  </body>
+</html>

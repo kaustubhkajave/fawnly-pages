@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fawnly</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --background: #fffdf6;
+        --surface: #fffbf1;
+        --text: #1f2f27;
+        --muted: #65726b;
+        --accent: #274636;
+        --border: #e8dfce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--background);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 0 18px 48px rgba(31, 47, 39, 0.08);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2.25rem, 8vw, 4rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      nav {
+        display: grid;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      a {
+        display: block;
+        padding: 16px 18px;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.34);
+      }
+
+      a span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card" aria-labelledby="page-title">
+        <h1 id="page-title">Fawnly</h1>
+        <p>A gentle, local-first walking companion for steps, distance estimates, daily goals, and movement history.</p>
+
+        <nav aria-label="Fawnly documents">
+          <a href="./privacy-policy.html">
+            Privacy Policy
+            <span>How Fawnly handles local data, permissions, notifications, and estimates.</span>
+          </a>
+          <a href="./support.html">
+            Support
+            <span>Help with steps, permissions, units, daily goals, and app data.</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </body>
+</html>
