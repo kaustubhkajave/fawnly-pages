@@ -69,6 +69,15 @@
         color: var(--muted);
       }
 
+      ul {
+        margin: 0 0 18px;
+        padding-left: 22px;
+      }
+
+      li {
+        color: var(--muted);
+      }
+
       .placeholder {
         color: var(--text);
         font-weight: 700;
@@ -81,17 +90,34 @@
       <article>
         <h1>Fawnly Support</h1>
 
-        <p>Fawnly is a gentle, local-first walking companion for viewing steps, distance estimates, daily goals, and movement history.</p>
+        <p>Fawnly is a calm, local-first walking companion for viewing steps, walking distance, active calories, daily goals, history, and soft themes.</p>
 
         <p>For help, contact:</p>
         <p class="placeholder"><a href="mailto:fawnlyapp@outlook.com">fawnlyapp@outlook.com</a></p>
 
-        <h2>Steps Are Not Updating</h2>
-        <p>Make sure motion or physical activity permission is enabled for Fawnly in your device settings. Step tracking also requires a real device with step sensor support. Simulators and emulators may show step tracking as unavailable.</p>
-        <p>If permission is denied, open your device settings and allow motion or physical activity access for Fawnly.</p>
+        <h2>Apple Health on iPhone</h2>
+        <p>On iPhone, Fawnly reads steps, walking and running distance, and active energy from Apple Health with your permission.</p>
+        <p>To review or change access, open the Health app and go to Sharing &rarr; Apps &rarr; Fawnly.</p>
+        <p>HealthKit requires a TestFlight, development, or App Store build. Apple Health data is not available in Expo Go.</p>
+
+        <h2>Steps, Distance, or Calories Are Not Updating</h2>
+        <p>If Fawnly is not showing recent activity on iPhone, check that Apple Health access is enabled for Fawnly:</p>
+        <ul>
+          <li>Open the Health app</li>
+          <li>Go to Sharing</li>
+          <li>Open Apps</li>
+          <li>Select Fawnly</li>
+          <li>Allow access to Steps, Walking + Running Distance, and Active Energy</li>
+        </ul>
+        <p>If Apple Health does not provide distance or active calorie data for a period, Fawnly may show a dash for those values.</p>
+
+        <h2>Apple Health Status Says Needs Attention</h2>
+        <p>This usually means Fawnly cannot confirm readable Apple Health data. Open the Health app and check Sharing &rarr; Apps &rarr; Fawnly.</p>
+        <p>Apple does not always tell apps whether Health read access was denied, so Fawnly uses a careful status message instead of showing technical errors.</p>
 
         <h2>Android Step Counting in v1</h2>
-        <p>On Android, Fawnly v1 counts live steps while the app is open. It does not use Android Health Connect yet, so it does not provide complete background step history in v1.</p>
+        <p>On Android, Fawnly v1 counts live steps while the app is open. It does not use Android Health Connect yet, so it does not provide complete background step history in this version.</p>
+        <p>Android distance and calorie values may be estimates.</p>
 
         <h2>Notification Permission</h2>
         <p>Daily Summary notifications are optional. Fawnly asks for notification permission only when you turn Daily Summary on in settings.</p>
@@ -104,10 +130,14 @@
         <p>You can turn Daily Goal on or off and adjust the goal amount in settings. The goal is step-based.</p>
 
         <h2>Clearing or Resetting Data</h2>
-        <p>Fawnly v1 stores activity history and settings locally on your device. To remove stored app data, delete Fawnly from your device or clear the app's stored data through your device settings where supported.</p>
+        <p>Fawnly stores activity history and settings locally on your device. To remove stored app data, delete Fawnly from your device or clear the app's stored data through your device settings where supported.</p>
+        <p>Apple Health records remain managed by Apple Health because Fawnly only reads them with your permission.</p>
 
-        <h2>Estimates</h2>
-        <p>Distance and calorie values are estimates. They are not medical advice and should not be used for diagnosis, treatment, or medical decision-making.</p>
+        <h2>Privacy</h2>
+        <p>Fawnly does not require an account. Fawnly does not collect your Health data. It stays on your device. There are no ads, analytics, third-party tracking, or Fawnly cloud sync.</p>
+
+        <h2>Medical Notice</h2>
+        <p>Fawnly is not a medical device and does not provide medical advice, diagnosis, or treatment.</p>
       </article>
     </main>
   </body>

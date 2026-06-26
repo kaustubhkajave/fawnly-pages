@@ -23,6 +23,18 @@
         margin: 0;
         background: var(--background);
         color: var(--text);
+        font        --accent: #274636;
+        --border: #e8dfce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         line-height: 1.65;
       }
@@ -89,45 +101,52 @@
       <a class="back" href="./index.html">Fawnly</a>
       <article>
         <h1>Fawnly Privacy Policy</h1>
-        <p>Last updated: June 16, 2026</p>
+        <p>Last updated: June 26, 2026</p>
 
-        <p>Fawnly is a local-first walking and step tracking app. It helps you view your movement, estimate distance and calories, and set gentle walking preferences.</p>
+        <p>Fawnly is a local-first walking and step tracking app. It helps you view your daily movement, walking distance, active calories, daily goals, history, and calm app preferences.</p>
 
         <h2>Data Stored on Your Device</h2>
         <p>Fawnly stores app data locally on your device. This may include:</p>
         <ul>
-          <li>Step history</li>
+          <li>Step history and recent activity history shown in the app</li>
           <li>Daily walking goal</li>
-          <li>Height and weight settings used for estimates</li>
           <li>Distance unit preference</li>
           <li>Theme preference</li>
           <li>Daily summary notification preference</li>
           <li>Onboarding and other app settings</li>
+          <li>Legacy height, weight, or stride settings from earlier versions, if already stored on your device</li>
         </ul>
-        <p>This data is used to make the app work on your device. Fawnly v1 does not sync this data to a Fawnly server.</p>
+        <p>This data is used to make the app work on your device. Fawnly does not sync this data to a Fawnly server.</p>
 
         <h2>Accounts and Cloud Sync</h2>
-        <p>Fawnly v1 does not create user accounts and does not include cloud sync. Your activity history and settings stay on your device unless you choose to back up, transfer, or share your device data using operating system features outside of Fawnly.</p>
+        <p>Fawnly does not require an account and does not include Fawnly cloud sync. Your activity history and settings stay on your device unless you choose to back up, transfer, or share your device data using operating system features outside of Fawnly.</p>
 
         <h2>Ads, Analytics, and Tracking</h2>
-        <p>Fawnly v1 does not include ads, analytics, or third-party tracking. Fawnly does not sell your data.</p>
+        <p>Fawnly does not include ads, analytics, or third-party tracking. Fawnly does not sell your data.</p>
 
-        <h2>Health Data and Device Sensors</h2>
-        <p>Fawnly uses device step and motion features to show step activity when available and permitted. Fawnly v1 does not use Apple HealthKit or Android Health Connect.</p>
-        <p>On Android, Fawnly v1 can count live steps while the app is open. It does not provide full background step history through Health Connect.</p>
+        <h2>Apple Health on iPhone</h2>
+        <p>On iPhone, Fawnly can read Apple Health step count, walking and running distance, and active energy burned when you grant permission. This data is used only to show your activity and history inside the app.</p>
+        <p>Fawnly does not collect your Apple Health data. It stays on your device. Fawnly does not send Apple Health data to a Fawnly server.</p>
+        <p>Fawnly does not write data to Apple Health. You can manage Fawnly's Apple Health access in the Health app under Sharing &rarr; Apps &rarr; Fawnly.</p>
+        <p>Fawnly does not use Motion &amp; Fitness or Core Motion as an iPhone activity fallback. If Apple Health access is not available, activity totals may not refresh until access is restored.</p>
+
+        <h2>Android Step Counting</h2>
+        <p>On Android, Fawnly can count live steps while the app is open. Android distance and calorie values may be estimates. Fawnly does not use Android Health Connect yet, so it does not provide complete background step history on Android in this version.</p>
 
         <h2>Notifications</h2>
-        <p>Daily Summary notifications are optional. If enabled, Fawnly schedules a local reminder with generic copy, such as a prompt to check your summary. The notification does not include exact step counts, calories, or distance in v1.</p>
+        <p>Daily Summary notifications are optional. If enabled, Fawnly schedules a local reminder with generic copy, such as a prompt to check your summary.</p>
         <p>You can turn Daily Summary notifications off in the app settings or manage notification permission in your device settings.</p>
 
-        <h2>Estimates</h2>
-        <p>Distance and calorie values are estimates. They may use your step count, height, weight, stride settings, and unit preferences. These estimates are provided for general wellness context only.</p>
+        <h2>Activity Values</h2>
+        <p>On iPhone, steps, walking and running distance, and active calories come from Apple Health when available. If Apple Health does not provide distance or active calories for a period, Fawnly may show those values as unavailable.</p>
+        <p>On Android, distance and calorie values may be estimates and are provided for general wellness context only.</p>
 
         <h2>Not Medical Advice</h2>
         <p>Fawnly is not a medical device and does not provide medical advice, diagnosis, or treatment. If you have health concerns or questions about physical activity, talk with a qualified healthcare professional.</p>
 
         <h2>Deleting Your Data</h2>
-        <p>Because Fawnly stores v1 data locally on your device, you can delete app data by deleting Fawnly from your device or clearing the app's stored data through your device settings where supported.</p>
+        <p>Because Fawnly stores app data locally on your device, you can delete Fawnly app data by deleting Fawnly from your device or clearing the app's stored data through your device settings where supported.</p>
+        <p>Apple Health records are managed by Apple Health because Fawnly only reads them with your permission.</p>
 
         <h2>Contact</h2>
         <p>For privacy or support questions, contact:</p>
