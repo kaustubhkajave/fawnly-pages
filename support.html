@@ -90,13 +90,13 @@
       <article>
         <h1>Fawnly Support</h1>
 
-        <p>Fawnly is a calm, local-first walking companion for viewing steps, walking distance, active calories, daily goals, history, and soft themes.</p>
+        <p>Fawnly is a calm, local-first walking companion for viewing Apple Health activity, recording outdoor activities, keeping private routes, using Home Screen widgets, and building a gentle walking habit.</p>
 
         <p>For help, contact:</p>
         <p class="placeholder"><a href="mailto:fawnlyapp@outlook.com">fawnlyapp@outlook.com</a></p>
 
         <h2>Apple Health on iPhone</h2>
-        <p>On iPhone, Fawnly reads steps, walking and running distance, and active energy from Apple Health with your permission.</p>
+        <p>On iPhone, Fawnly reads steps, walking and running distance, active energy, and flights climbed from Apple Health with your permission. Flights climbed may be displayed as floors.</p>
         <p>To review or change access, open the Health app and go to Sharing &rarr; Apps &rarr; Fawnly.</p>
         <p>HealthKit requires a TestFlight, development, or App Store build. Apple Health data is not available in Expo Go.</p>
 
@@ -107,7 +107,7 @@
           <li>Go to Sharing</li>
           <li>Open Apps</li>
           <li>Select Fawnly</li>
-          <li>Allow access to Steps, Walking + Running Distance, and Active Energy</li>
+          <li>Allow access to Steps, Walking + Running Distance, Active Energy, and Flights Climbed</li>
         </ul>
         <p>If Apple Health does not provide distance or active calorie data for a period, Fawnly may show a dash for those values.</p>
 
@@ -115,17 +115,40 @@
         <p>This usually means Fawnly cannot confirm readable Apple Health data. Open the Health app and check Sharing &rarr; Apps &rarr; Fawnly.</p>
         <p>Apple does not always tell apps whether Health read access was denied, so Fawnly uses a careful status message instead of showing technical errors.</p>
 
+        <h2>Recording an Activity</h2>
+        <p>Activities is currently an iPhone beta. Walk is available free; Paced Walk, Hike, and Run require Fawnly Plus. Fawnly asks for location access only when you start your first recorded activity.</p>
+        <p>The recorder shows active time, GPS distance, current and average pace, an Apple Maps route, and optional live session steps. Pause, Resume, and Finish are available in the recorder. Going back keeps the activity running and shows an Activity in progress card so you can return to it. The close button discards only after confirmation.</p>
+        <p>If background location is allowed, recording can continue while Fawnly is not on screen. If it is not allowed, Fawnly uses foreground-only recording and must remain open. GPS accuracy and pace can vary with signal quality and surroundings.</p>
+
+        <h2>Paced Walk</h2>
+        <p>Paced Walk uses a cadence beat rather than a GPS speed target. Choose Easy, Steady, Brisk, or a custom steps-per-minute target. The beat can play over other audio, can be muted inside the recorder, and follows Pause and Resume. Fawnly does not record microphone audio.</p>
+
+        <h2>Lock Screen and Dynamic Island</h2>
+        <p>On supported iPhones, an active recording can appear as a Live Activity on the Lock Screen and Dynamic Island. It shows activity type, recording state, elapsed time, distance, and pace, but never stores route coordinates in the Live Activity. Tapping it returns to the recorder. Availability is controlled by iOS.</p>
+
+        <h2>Saving and Restoring Activities with Apple Health</h2>
+        <p>The optional Save activities to Apple Health setting saves only a completed workout and its recorded route. It does not write steps, calories, or elevation. A saved workout remains managed in Apple Health if you delete the local Fawnly copy.</p>
+        <p>Restore from Apple Health can recover workouts and available routes that Fawnly previously saved there. Restored session steps remain unavailable. Restore never adds activity-recorder values to Home or History totals and never uploads a route to Fawnly servers.</p>
+
+        <h2>Activity Route Sharing</h2>
+        <p>Plus subscribers can create an activity card containing a normalized route silhouette. The card does not include an Apple Maps background, coordinates, start or finish markers, home labels, or place names. A route shape can still reveal a familiar pattern, so review the card before sharing it. The image leaves your device only through the system share sheet you choose.</p>
+
+        <h2>Home Screen Widgets</h2>
+        <p>Fawnly offers small and medium iPhone Home Screen widgets for today's steps, goal progress, and available activity values. The widgets do not read Apple Health directly. They display the latest local snapshot written after Fawnly refreshes Apple Health.</p>
+        <p>If a widget says to open Fawnly, launch the app and allow the Apple Health refresh to finish. WidgetKit controls when the displayed timeline refreshes, so an update may not appear instantly. Values from an earlier calendar day are hidden rather than presented as today's data.</p>
+
         <h2>Fawnly Plus</h2>
-        <p>Fawnly Plus is an optional subscription that unlocks premium themes, Month and Year history (and older weeks and months on the Home graph), distance-first Home, and richer share features. Today's steps, Apple Health, basic distance and calories, and basic history stay free.</p>
+        <p>Fawnly Plus is an optional subscription that unlocks premium themes, custom hero fonts, Month and Year history, older periods, distance-first Home, Week and Month share cards, Paced Walk, Hike, Run, and activity route sharing. Today's Apple Health summary, basic history, Home Screen widgets, and Walk recording stay free.</p>
         <p>To subscribe, open Settings and tap Fawnly Plus. To restore a purchase on a new device, open the Fawnly Plus screen and tap "Restore purchases". To manage or cancel, go to your device Settings &rarr; your Apple ID &rarr; Subscriptions.</p>
+        <p>Plus also includes an optional weekly step-card recap notification. Turn it on under Settings &rarr; Activity &rarr; Weekly card; tapping the notification opens your shareable weekly card.</p>
 
         <h2>Android Step Counting</h2>
         <p>On Android, Fawnly reads your activity from Health Connect when it is available and you grant permission; otherwise it counts live steps using the device step sensor while the app is open.</p>
         <p>Android distance and calorie values may be estimates.</p>
 
         <h2>Notification Permission</h2>
-        <p>Daily Summary notifications are optional. Fawnly asks for notification permission only when you turn Daily Summary on in settings.</p>
-        <p>If notifications are off, enable them in your device settings and then turn Daily Summary on again in Fawnly.</p>
+        <p>The daily 8 PM reminder and the Plus weekly recap are optional. Fawnly asks for notification permission only when you choose to enable a reminder.</p>
+        <p>If notifications are off, enable them in your device settings and then turn the reminder on again in Fawnly.</p>
 
         <h2>Changing Units</h2>
         <p>You can change distance units in the app settings. Fawnly supports kilometers and miles.</p>
@@ -134,11 +157,11 @@
         <p>You can turn Daily Goal on or off and adjust the goal amount in settings. The goal is step-based.</p>
 
         <h2>Clearing or Resetting Data</h2>
-        <p>Fawnly stores activity history and settings locally on your device. To remove stored app data, delete Fawnly from your device or clear the app's stored data through your device settings where supported.</p>
-        <p>Apple Health records remain managed by Apple Health because Fawnly only reads them with your permission.</p>
+        <p>Fawnly stores activity history, recorded sessions, GPS routes, widget snapshots, and settings locally on your device. You can delete individual recorded activities in Fawnly. Deleting the app removes its local data according to operating-system behavior.</p>
+        <p>If you enabled Apple Health saving, deleting a local activity does not delete its Apple Health workout. It can return only if you explicitly use Restore from Apple Health while that Health record still exists. Manage Health records in the Health app.</p>
 
         <h2>Privacy</h2>
-        <p>Fawnly does not require an account. Fawnly does not collect your Health data. It stays on your device. There are no ads, no analytics, and no cross-app tracking. The only third-party service Fawnly uses is RevenueCat, and only to manage Fawnly Plus subscriptions — it never receives your health or activity data. See the <a href="./privacy-policy.html">Privacy Policy</a> for details.</p>
+        <p>Fawnly does not require an account. Apple Health data, recorded activities, routes, and widget snapshots stay on your device and are not sent to a Fawnly server. There are no ads, no third-party analytics, and no cross-app tracking. RevenueCat is used only to manage Fawnly Plus and never receives your health, activity, or route data. See the <a href="./privacy-policy.html">Privacy Policy</a> for details.</p>
 
         <h2>Medical Notice</h2>
         <p>Fawnly is not a medical device and does not provide medical advice, diagnosis, or treatment.</p>
